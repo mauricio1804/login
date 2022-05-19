@@ -11,8 +11,8 @@ firebase.auth().onAuthStateChanged(function (usuario) {
   })
 
   function entrar() {
-    let emailUsuario = document.getElementById('email').value
-    let senhaUsuario = document.getElementById('senha').value
+    let emailUsuario = document.getElementById('floatingInput').value
+    let senhaUsuario = document.getElementById('floatingPassword').value
 
     //método de login de usuários existentes no firebase
   firebase.auth().signInWithEmailAndPassword(emailUsuario, senhaUsuario)
@@ -23,17 +23,9 @@ firebase.auth().onAuthStateChanged(function (usuario) {
 
   function mensagemErros(error) {
     if (error.code == "auth/user-not-found") {
-        return "Usuário ou senha invalido";
+      return "Usuário ou senha invalido";
     }
     return error.message;
-  }
-
-
-  function error(mensagemErro){
-      switch(codigoErro){
-          case auth/invalid-email:
-            mensagemErro = alert("email invalido");
-      }
   }
 
   function sair() {
