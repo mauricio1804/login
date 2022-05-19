@@ -15,16 +15,19 @@ firebase.auth().onAuthStateChanged(function (usuario) {
     let senhaUsuario = document.getElementById('senha').value
 
     //método de login de usuários existentes no firebase
-  firebase
-  .auth()
-  .signInWithEmailAndPassword(emailUsuario, senhaUsuario)
-  .catch(function (error) {
-    // Lide com erros aqui
-    let codigoErro = error.code
-    let mensagemErro = error.message
-    window.alert('Erro : ' + mensagemErro)
+  firebase.auth().signInWithEmailAndPassword(emailUsuario, senhaUsuario)
+  .catch(error => {
+    alert(mensagemErros(error));
   })
+}
+
+  function mensagemErros(error) {
+    if (error.code == "auth/user-not-found") {
+        return "Usuário ou senha invalido";
+    }
+    return error.message;
   }
+
 
   function error(mensagemErro){
       switch(codigoErro){
