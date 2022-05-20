@@ -10,28 +10,25 @@
 </head>
 <body>
     <div class="papel_de_parede">
-
         <div class="login" id="login ">
-            <h1 class="titulo">Faça seu login</h1>
-            <div class="form-floating mb-3">
+            <h1 class="titulo mb-4">Faça seu login</h1>
+            <div class="form-floating mb-3 mr-5">
                 <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
                 <label for="floatingInput">Email address</label>
             </div>
-            <div class="form-floating">
+            <div class="form-floating mb-2 mr-5">
                 <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
                 <label for="floatingPassword">Password</label>
             </div>
-            <button type="button" class="btn btn-outline-primary" onclick="entrar()">Entrar</button>
-            <!-- <button onclick="entrar()">Entrar</button> -->
-            <!-- <input type="email" id="email" placeholder="insira seu email">
-                <input type="password" id="senha" placeholder="insira sua senha"> -->
+            <button type="button" class="btn btn-outline-primary mb-3" onclick="entrar()">Entrar</button>
             </div>
             
             <div class="logado" id="usuario">
-                <h1>Login efetuado</h1>
-                <button onclick="sair()">Sair</button>
+                <h1 class="tituloLogado">Login efetuado</h1>
+                <button type="button" class="btn btn-outline-primary" onclick="sair()">Sair</button>
             </div>
         </div>
+
             <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
             <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
             <script>
@@ -49,8 +46,9 @@
   firebase.initializeApp(firebaseConfig)
 </script>
 
-    <script src="index.js"></script> 
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>  
 </body>
 </html>
